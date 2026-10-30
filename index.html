@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Little Website 🎀</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: #925b79;
+      background: linear-gradient(135deg, #ffe2ed, #f1e5ff, #e0f4ff);
+    }
+
+    .card {
+      width: 100%;
+      max-width: 390px;
+      padding: 35px 22px;
+      background: #ffffffd9;
+      border: 2px solid white;
+      border-radius: 30px;
+      box-shadow: 0 12px 40px #cf9bc544;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .bow {
+      font-size: 55px;
+    }
+
+    h1 {
+      color: #e887b4;
+      font-size: 27px;
+    }
+
+    p {
+      line-height: 1.8;
+    }
+
+    button {
+      border: none;
+      border-radius: 30px;
+      padding: 13px 23px;
+      background: #f4a7cb;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #message {
+      color: #d66fa2;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-7px); }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="card">
+    <div class="bow">🎀</div>
+
+    <h1>Welcome to my website!</h1>
+
+    <p>૮ ˶ᵔ ᵕ ᵔ˶ ა</p>
+
+    <p>Một góc nhỏ xinh xắn trên Internet ♡</p>
+
+    <p>Đây là chiếc web đáng yêu do mình tạo ra.</p>
+
+    <button onclick="showLove()">
+      Bấm vào đây 💗
+    </button>
+
+    <div id="message"></div>
+
+    <p>🌷 🧸 🍓 🌷</p>
+  </main>
+
+  <script>
+    function showLove() {
+      document.getElementById("message").textContent =
+        "Cảm ơn bạn đã ghé thăm chiếc web nhỏ này! 🎀";
+    }
+  </script>
+</body>
+</html>
