@@ -2,101 +2,233 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Little Website 🎀</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QUỲNH NHƯ A2</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f6ff;
+    color: #28334b;
+}
+
+/* PHẦN ĐẦU */
+header {
+    background: linear-gradient(120deg, #6550df, #c94fc0);
+    color: white;
+    padding: 65px 7%;
+}
+
+header h1 {
+    font-size: 42px;
+    margin-bottom: 35px;
+}
+
+header p {
+    font-size: 23px;
+    line-height: 1.6;
+}
+
+/* MENU */
+nav {
+    background: white;
+    padding: 25px 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    box-shadow: 0 4px 15px #ddd;
+}
+
+nav a {
+    text-decoration: none;
+    color: #5545bd;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #db54ae;
+}
+
+/* NỘI DUNG */
+main {
+    padding: 55px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.welcome {
+    background: linear-gradient(120deg, #d9f3ff, #f9dafa);
+    padding: 65px 55px;
+    border-radius: 40px;
+    margin-bottom: 35px;
+}
+
+.welcome h2 {
+    font-size: 38px;
+    color: #5545bd;
+    margin-bottom: 35px;
+}
+
+.welcome p {
+    font-size: 23px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.btn {
+    display: inline-block;
+    background: #6550df;
+    color: white;
+    text-decoration: none;
+    padding: 20px 35px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #c94fc0;
+}
+
+/* CÁC MỤC */
+.section {
+    background: white;
+    padding: 35px;
+    border-radius: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 20px #e5e3f5;
+}
+
+.section h2 {
+    color: #6550df;
+    margin-bottom: 20px;
+    font-size: 27px;
+}
+
+.section p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+footer {
+    background: linear-gradient(120deg, #6550df, #c94fc0);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    font-size: 16px;
+}
+
+/* ĐIỆN THOẠI */
+@media (max-width: 600px) {
+    header {
+        padding: 55px 7%;
     }
 
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      color: #925b79;
-      background: linear-gradient(135deg, #ffe2ed, #f1e5ff, #e0f4ff);
+    header h1 {
+        font-size: 34px;
     }
 
-    .card {
-      width: 100%;
-      max-width: 390px;
-      padding: 35px 22px;
-      background: #ffffffd9;
-      border: 2px solid white;
-      border-radius: 30px;
-      box-shadow: 0 12px 40px #cf9bc544;
-      animation: float 3s ease-in-out infinite;
+    header p {
+        font-size: 19px;
     }
 
-    .bow {
-      font-size: 55px;
+    nav {
+        gap: 25px;
     }
 
-    h1 {
-      color: #e887b4;
-      font-size: 27px;
+    nav a {
+        font-size: 17px;
     }
 
-    p {
-      line-height: 1.8;
+    .welcome {
+        padding: 45px 30px;
     }
 
-    button {
-      border: none;
-      border-radius: 30px;
-      padding: 13px 23px;
-      background: #f4a7cb;
-      color: white;
-      font-size: 16px;
-      cursor: pointer;
+    .welcome h2 {
+        font-size: 30px;
     }
 
-    #message {
-      color: #d66fa2;
-      font-weight: bold;
-      margin-top: 20px;
+    .welcome p {
+        font-size: 19px;
     }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-7px); }
-    }
-  </style>
+}
+</style>
 </head>
 
 <body>
-  <main class="card">
-    <div class="bow">🎀</div>
 
-    <h1>Welcome to my website!</h1>
+<header>
+    <h1>🌈 QUỲNH NHƯ A2</h1>
+    <p>Góc học tập và khám phá thế giới Tin học 💻</p>
+</header>
 
-    <p>૮ ˶ᵔ ᵕ ᵔ˶ ა</p>
+<nav>
+    <a href="#home">🏠 Trang chủ</a>
+    <a href="#knowledge">📚 Kiến thức</a>
+    <a href="#documents">📁 Tài liệu</a>
+    <a href="#exercises">✏️ Bài tập</a>
+    <a href="#about">💡 Giới thiệu</a>
+</nav>
 
-    <p>Một góc nhỏ xinh xắn trên Internet ♡</p>
+<main>
 
-    <p>Đây là chiếc web đáng yêu do mình tạo ra.</p>
+    <section class="welcome" id="home">
+        <h2>Chào mừng đến với thế giới Tin học! ✨</h2>
+        <p>
+            Cùng học hỏi, khám phá và phát triển kỹ năng công nghệ.
+            Đây là không gian chia sẻ kiến thức, tài liệu và bài tập
+            Tin học dành cho học sinh.
+        </p>
+        <a href="#knowledge" class="btn">Khám phá ngay →</a>
+    </section>
 
-    <button onclick="showLove()">
-      Bấm vào đây 💗
-    </button>
+    <section class="section" id="knowledge">
+        <h2>📚 Kiến thức</h2>
+        <p>
+            Tổng hợp những kiến thức Tin học bổ ích, giúp học sinh
+            học tập và khám phá thế giới công nghệ.
+        </p>
+    </section>
 
-    <div id="message"></div>
+    <section class="section" id="documents">
+        <h2>📁 Tài liệu</h2>
+        <p>
+            Nơi lưu trữ tài liệu học tập, bài giảng và những nội dung
+            hữu ích phục vụ việc học.
+        </p>
+    </section>
 
-    <p>🌷 🧸 🍓 🌷</p>
-  </main>
+    <section class="section" id="exercises">
+        <h2>✏️ Bài tập</h2>
+        <p>
+            Cùng luyện tập, củng cố kiến thức và nâng cao kỹ năng
+            Tin học qua các bài tập.
+        </p>
+    </section>
 
-  <script>
-    function showLove() {
-      document.getElementById("message").textContent =
-        "Cảm ơn bạn đã ghé thăm chiếc web nhỏ này! 🎀";
-    }
-  </script>
+    <section class="section" id="about">
+        <h2>💡 Giới thiệu</h2>
+        <p>
+            Website được xây dựng nhằm tạo không gian học tập,
+            chia sẻ kiến thức và khám phá công nghệ.
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    🌈 QUỲNH NHƯ A2 | Góc học tập Tin học 💻
+</footer>
+
 </body>
 </html>
