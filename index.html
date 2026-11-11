@@ -1,45 +1,53 @@
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Quỳnh Như A2 - Góc học tập Tin học</title>
+<title>QUỲNH NHƯ A2 | DIGITAL WORLD</title>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap');
 
+:root {
+  --dark: #111329;
+  --purple: #7865ff;
+  --blue: #43c6f5;
+  --light: #f5f6fc;
+}
+
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
   font-family: 'Be Vietnam Pro', sans-serif;
-  background: #f6f8f5;
-  color: #1c2b3a;
-}
-
-.topbar {
-  background: #102b46;
-  color: white;
-  padding: 15px 6%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.topbar span {
-  color: #bcebdc;
+  background: var(--light);
+  color: #20223d;
 }
 
 header {
-  padding: 22px 6%;
+  background: var(--dark);
+  color: white;
+  padding: 20px 7%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: white;
   position: sticky;
   top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.logo span {
+  color: var(--blue);
 }
 
 nav {
@@ -50,98 +58,195 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: #526171;
-  font-size: 13px;
-  font-weight: bold;
+  color: #d5d7e8;
+  font-size: 12px;
+  transition: .3s;
 }
 
 nav a:hover {
-  color: #246bce;
+  color: var(--blue);
 }
 
+/* BANNER */
+
 .hero {
-  padding: 75px 6%;
-  background: linear-gradient(115deg,#e4f5ef,#edf3fc);
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  background:
+    radial-gradient(circle at 85% 20%, #5145b8, transparent 35%),
+    linear-gradient(120deg,#111329,#20204b);
+  color: white;
+  padding: 90px 8%;
+  min-height: 470px;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 30px;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.tag {
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 3px;
 }
 
 .hero h1 {
-  font-size: 48px;
+  font-size: clamp(38px,5vw,64px);
   line-height: 1.2;
-  color: #102b46;
+  margin: 22px 0;
 }
 
 .hero h1 span {
-  color: #246bce;
+  color: var(--blue);
 }
 
 .hero p {
-  color: #596b79;
+  color: #b5b8d0;
   line-height: 1.9;
+  font-size: 14px;
 }
 
-.btn {
+.hero-btn {
   display: inline-block;
-  background: #102b46;
+  background: var(--purple);
   color: white;
-  padding: 13px 20px;
-  border-radius: 9px;
+  padding: 14px 25px;
+  border-radius: 8px;
+  margin-top: 25px;
   text-decoration: none;
-  margin-top: 15px;
+  font-weight: bold;
+  font-size: 13px;
+  transition: .3s;
 }
 
-.visual {
-  text-align: center;
-  font-size: 130px;
+.hero-btn:hover {
+  background: #5544e8;
+  transform: translateY(-3px);
 }
+
+.hero-art {
+  font-size: 130px;
+  filter: drop-shadow(0 0 30px #43c6f555);
+  animation: floating 3s infinite ease-in-out;
+}
+
+@keyframes floating {
+  50% { transform: translateY(-15px); }
+}
+
+/* SECTIONS */
 
 section {
-  padding: 65px 6%;
+  padding: 75px 8%;
 }
 
-h2 {
-  color: #102b46;
-  font-size: 29px;
+.section-label {
+  color: var(--purple);
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 3px;
 }
+
+.section-title {
+  font-size: 31px;
+  margin: 12px 0;
+}
+
+.section-desc {
+  color: #777b93;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+/* KIẾN THỨC */
 
 .cards {
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  gap: 18px;
+  gap: 20px;
 }
 
 .card {
   background: white;
-  padding: 25px;
-  border-radius: 15px;
-  border: 1px solid #e8eeeb;
+  padding: 27px;
+  border-radius: 14px;
+  border: 1px solid #ececf5;
   transition: .3s;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px #18364b15;
+  transform: translateY(-7px);
+  box-shadow: 0 15px 35px #34346b16;
 }
 
-.card .icon {
-  font-size: 35px;
+.card-icon {
+  width: 55px;
+  height: 55px;
+  background: #eeedff;
+  border-radius: 13px;
+  display: grid;
+  place-items: center;
+  font-size: 27px;
+  margin-bottom: 20px;
 }
 
 .card h3 {
-  color: #102b46;
+  font-size: 16px;
+  margin-bottom: 12px;
 }
 
 .card p {
-  color: #687786;
+  font-size: 13px;
+  color: #85889d;
   line-height: 1.8;
-  font-size: 14px;
 }
 
-.resources {
-  background: #edf3f6;
+.card a {
+  display: inline-block;
+  margin-top: 17px;
+  color: var(--purple);
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* TÌM KIẾM */
+
+.search-area {
+  background: #eae9ff;
+  padding: 35px;
+  border-radius: 16px;
+  margin-bottom: 35px;
+}
+
+.search-area h3 {
+  margin-bottom: 15px;
+}
+
+.search-area input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #d8d6f7;
+  border-radius: 8px;
+  outline: none;
+  font-family: inherit;
+}
+
+#search-result {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #5145b8;
+}
+
+/* TÀI LIỆU */
+
+.library {
+  background: white;
 }
 
 .resource-list {
@@ -151,67 +256,135 @@ h2 {
 }
 
 .resource {
-  background: white;
+  background: #f7f7fc;
+  border: 1px solid #ededf5;
   padding: 20px;
   border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
-.quiz {
-  background: #102b46;
+.resource-icon {
+  font-size: 28px;
+}
+
+.resource strong {
+  font-size: 13px;
+}
+
+.resource p {
+  font-size: 11px;
+  color: #898ba0;
+  margin-top: 5px;
+}
+
+/* BÀI TẬP */
+
+.practice {
+  background: var(--dark);
   color: white;
-  padding: 30px;
-  border-radius: 18px;
 }
 
-.quiz button {
-  background: #bcebdc;
-  color: #102b46;
-  border: none;
-  padding: 13px 20px;
+.practice .section-title {
+  color: white;
+}
+
+.question-box {
+  background: #222442;
+  border: 1px solid #393b62;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 700px;
+}
+
+.question-box h3 {
+  margin-bottom: 20px;
+}
+
+.answer {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 14px;
+  margin: 10px 0;
+  background: #303251;
+  border: 1px solid #44466d;
+  color: white;
   border-radius: 8px;
-  font-weight: bold;
   cursor: pointer;
+  font-family: inherit;
+  transition: .2s;
+}
+
+.answer:hover {
+  background: var(--purple);
 }
 
 #result {
-  margin-top: 15px;
-  color: #bcebdc;
+  margin-top: 20px;
+  color: var(--blue);
+  font-size: 14px;
 }
+
+/* GIỚI THIỆU */
 
 .about {
   display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-  gap: 30px;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
   align-items: center;
 }
 
-.about-image {
-  background: linear-gradient(140deg,#d9f1e8,#dce8fa);
-  padding: 60px;
+.about-art {
+  background: linear-gradient(135deg,#dedbff,#d7f4ff);
+  min-height: 250px;
+  display: grid;
+  place-items: center;
   border-radius: 18px;
-  text-align: center;
-  font-size: 65px;
+  font-size: 85px;
 }
 
 .about p {
-  color: #687786;
+  color: #777b93;
   line-height: 1.9;
+  font-size: 14px;
 }
 
+/* FOOTER */
+
 footer {
-  background: #0b2035;
+  background: #111329;
   color: white;
-  padding: 25px 6%;
   text-align: center;
+  padding: 35px 20px;
+}
+
+footer p {
+  color: #a5a9c1;
+  font-size: 12px;
+  margin-top: 10px;
 }
 
 @media(max-width:760px) {
-  .hero, .about {
-    grid-template-columns: 1fr;
+  header {
+    flex-direction: column;
+    gap: 18px;
   }
 
-  .hero h1 {
-    font-size: 36px;
+  nav {
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 65px 7%;
+  }
+
+  .hero-art {
+    font-size: 90px;
   }
 
   .cards {
@@ -222,9 +395,8 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  header {
-    flex-direction: column;
-    gap: 15px;
+  .about {
+    grid-template-columns: 1fr;
   }
 }
 </style>
@@ -232,13 +404,9 @@ footer {
 
 <body>
 
-<div class="topbar">
-  <b>QN • QUỲNH NHƯ A2</b>
-  <small>GÓC HỌC TẬP TIN HỌC</small>
-</div>
-
 <header>
-  <h3>QUỲNH NHƯ <span style="color:#246bce">A2</span></h3>
+  <div class="logo">QUỲNH NHƯ <span>A2.</span></div>
+
   <nav>
     <a href="#home">Trang chủ</a>
     <a href="#knowledge">Kiến thức</a>
@@ -250,92 +418,253 @@ footer {
 
 <main>
 
-<section class="hero" id="home">
-  <div>
-    <p>✦ LEARN • CREATE • EXPLORE</p>
-    <h1>Khám phá thế giới<br><span>Tin học</span> theo cách của bạn.</h1>
-    <p>Một góc nhỏ để học hỏi kiến thức công nghệ, tìm tài liệu hữu ích và rèn luyện kỹ năng Tin học mỗi ngày.</p>
-    <a href="#knowledge" class="btn">Khám phá ngay →</a>
+<!-- TRANG CHỦ -->
+
+<div class="hero" id="home">
+  <div class="hero-content">
+    <div class="tag">WELCOME TO MY WEBSITE</div>
+
+    <h1>WELCOME TO<br>
+      <span>DIGITAL WORLD</span>
+    </h1>
+
+    <p>
+      Chào mừng bạn đến với không gian học tập
+      Tin học của Quỳnh Như A2.
+      Cùng khám phá kiến thức, công nghệ
+      và những điều thú vị trong thế giới số!
+    </p>
+
+    <a href="#knowledge" class="hero-btn">
+      KHÁM PHÁ NGAY →
+    </a>
   </div>
-  <div class="visual">💻</div>
-</section>
+
+  <div class="hero-art">💻</div>
+</div>
+
+<!-- KIẾN THỨC -->
 
 <section id="knowledge">
-  <h2>Không gian kiến thức</h2>
-  <p>Khám phá những kiến thức thú vị về công nghệ.</p>
+
+  <div class="section-label">01 / KNOWLEDGE</div>
+  <h2 class="section-title">Khám phá kiến thức</h2>
+
+  <p class="section-desc">
+    Học tập và tìm hiểu những kiến thức thú vị
+    về công nghệ thông tin.
+  </p>
 
   <div class="cards">
+
     <div class="card">
-      <div class="icon">🖥️</div>
-      <h3>Phần cứng máy tính</h3>
-      <p>Tìm hiểu các bộ phận và cách máy tính hoạt động.</p>
+      <div class="card-icon">🖥️</div>
+      <h3>Máy tính và công nghệ</h3>
+      <p>
+        Tìm hiểu cấu tạo máy tính,
+        phần cứng và phần mềm.
+      </p>
+      <a href="#documents">Khám phá thêm →</a>
     </div>
 
     <div class="card">
-      <div class="icon">🌐</div>
-      <h3>Mạng và Internet</h3>
-      <p>Khám phá mạng máy tính và cách sử dụng Internet an toàn.</p>
+      <div class="card-icon">🌐</div>
+      <h3>Mạng Internet</h3>
+      <p>
+        Khám phá mạng máy tính,
+        Internet và thế giới trực tuyến.
+      </p>
+      <a href="#documents">Khám phá thêm →</a>
     </div>
 
     <div class="card">
-      <div class="icon">🧩</div>
-      <h3>Ứng dụng Tin học</h3>
-      <p>Làm quen với các công cụ và phần mềm hữu ích.</p>
+      <div class="card-icon">🤖</div>
+      <h3>Trí tuệ nhân tạo</h3>
+      <p>
+        Tìm hiểu AI và những ứng dụng
+        của công nghệ trong cuộc sống.
+      </p>
+      <a href="#documents">Khám phá thêm →</a>
     </div>
+
   </div>
 </section>
 
-<section class="resources" id="documents">
-  <h2>Thư viện tài liệu</h2>
-  <p>Tổng hợp tài liệu học tập và ôn luyện.</p>
+<!-- TÀI LIỆU -->
 
-  <div class="resource-list">
-    <div class="resource">📘 Bài học Tin học</div>
-    <div class="resource">📝 Tóm tắt lý thuyết</div>
-    <div class="resource">📂 Tài liệu tham khảo</div>
-    <div class="resource">💡 Mẹo học tập</div>
+<section class="library" id="documents">
+
+  <div class="section-label">02 / LIBRARY</div>
+  <h2 class="section-title">Thư viện học tập</h2>
+
+  <p class="section-desc">
+    Tìm kiếm và khám phá tài liệu học tập.
+  </p>
+
+  <div class="search-area">
+    <h3>🔎 Bạn đang tìm kiếm gì?</h3>
+    <input
+      type="text"
+      id="search"
+      placeholder="Nhập tên tài liệu..."
+      oninput="searchDocuments()"
+    >
+    <div id="search-result"></div>
+  </div>
+
+  <div class="resource-list" id="resource-list">
+
+    <div class="resource">
+      <div class="resource-icon">📘</div>
+      <div>
+        <strong>Bài học Tin học</strong>
+        <p>Kiến thức theo từng chủ đề</p>
+      </div>
+    </div>
+
+    <div class="resource">
+      <div class="resource-icon">📝</div>
+      <div>
+        <strong>Tóm tắt lý thuyết</strong>
+        <p>Nội dung ngắn gọn, dễ ghi nhớ</p>
+      </div>
+    </div>
+
+    <div class="resource">
+      <div class="resource-icon">📂</div>
+      <div>
+        <strong>Tài liệu tham khảo</strong>
+        <p>Nguồn học tập bổ sung</p>
+      </div>
+    </div>
+
+    <div class="resource">
+      <div class="resource-icon">💡</div>
+      <div>
+        <strong>Mẹo học tập</strong>
+        <p>Gợi ý học tập hiệu quả</p>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<section id="practice">
-  <div class="quiz">
-    <h2 style="color:white">Thử sức với câu hỏi nhanh!</h2>
-    <p>Thiết bị nào được xem là bộ não của máy tính?</p>
-    <button onclick="checkAnswer('A')">A. Màn hình</button>
-    <button onclick="checkAnswer('B')">B. CPU</button>
-    <button onclick="checkAnswer('C')">C. Bàn phím</button>
+<!-- BÀI TẬP -->
+
+<section class="practice" id="practice">
+
+  <div class="section-label">03 / PRACTICE</div>
+  <h2 class="section-title">Thử thách Tin học</h2>
+
+  <p class="section-desc" style="color:#a5a9c1">
+    Cùng kiểm tra kiến thức của bạn nhé!
+  </p>
+
+  <div class="question-box">
+
+    <h3>
+      Câu 1: Bộ phận nào được xem là bộ não
+      của máy tính?
+    </h3>
+
+    <button class="answer" onclick="checkAnswer('A')">
+      A. Màn hình
+    </button>
+
+    <button class="answer" onclick="checkAnswer('B')">
+      B. CPU
+    </button>
+
+    <button class="answer" onclick="checkAnswer('C')">
+      C. Bàn phím
+    </button>
+
     <div id="result"></div>
+
   </div>
 </section>
+
+<!-- GIỚI THIỆU -->
 
 <section id="about">
+
   <div class="about">
-    <div class="about-image">🌱💻</div>
+
+    <div class="about-art">💻✨</div>
+
     <div>
-      <h2>Giới thiệu</h2>
-      <p>Chào mừng bạn đến với góc học tập của Quỳnh Như A2! Website được xây dựng nhằm chia sẻ kiến thức, tài liệu và bài tập Tin học. Hy vọng đây sẽ là không gian học tập thân thiện, sáng tạo và bổ ích.</p>
+      <div class="section-label">04 / ABOUT ME</div>
+
+      <h2 class="section-title">
+        Về website của mình
+      </h2>
+
+      <p>
+        Xin chào! Chào mừng bạn đến với website
+        QUỲNH NHƯ A2.
+        Đây là không gian chia sẻ kiến thức,
+        tài liệu và những nội dung thú vị
+        về môn Tin học.
+        Website được tạo ra với mong muốn
+        mang đến một môi trường học tập
+        sáng tạo, thân thiện và bổ ích.
+      </p>
     </div>
+
   </div>
 </section>
 
 </main>
 
 <footer>
-  <b>QUỲNH NHƯ A2</b>
-  <p>Học hỏi hôm nay • Sáng tạo ngày mai</p>
-  <small>© 2026 Góc học tập Tin học</small>
+  <h3>QUỲNH NHƯ A2</h3>
+  <p>LEARN MORE • CREATE MORE • EXPLORE MORE</p>
+  <p>© 2026 Digital World. All rights reserved.</p>
 </footer>
 
 <script>
+
+// TÌM KIẾM TÀI LIỆU
+
+function searchDocuments() {
+  const input = document
+    .getElementById("search")
+    .value.toLowerCase();
+
+  const items = document.querySelectorAll(".resource");
+  let count = 0;
+
+  items.forEach(item => {
+    const text = item.innerText.toLowerCase();
+
+    if (text.includes(input)) {
+      item.style.display = "flex";
+      count++;
+    } else {
+      item.style.display = "none";
+    }
+  });
+
+  document.getElementById("search-result").innerText =
+    input === "" ? "" :
+    count > 0 ? "Tìm thấy " + count + " kết quả." :
+    "Không tìm thấy tài liệu phù hợp.";
+}
+
+// TRẮC NGHIỆM
+
 function checkAnswer(answer) {
   const result = document.getElementById("result");
 
-  if(answer === "B") {
-    result.innerHTML = "🎉 Chính xác! CPU là bộ xử lý trung tâm của máy tính.";
+  if (answer === "B") {
+    result.innerHTML =
+      "🎉 Chính xác! CPU là bộ xử lý trung tâm của máy tính.";
   } else {
-    result.innerHTML = "Chưa đúng rồi! Đáp án chính xác là B. CPU.";
+    result.innerHTML =
+      "Chưa chính xác! Đáp án đúng là B. CPU nhé!";
   }
 }
+
 </script>
 
 </body>
