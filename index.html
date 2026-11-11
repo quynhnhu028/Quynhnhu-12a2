@@ -4,668 +4,318 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>QUỲNH NHƯ A2 | DIGITAL WORLD</title>
+<title>QUỲNH NHƯ A2 - Góc học tập</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap');
-
 :root {
-  --dark: #111329;
-  --purple: #7865ff;
-  --blue: #43c6f5;
-  --light: #f5f6fc;
+  --pink:#ff9eb5;
+  --purple:#b9a5ed;
+  --mint:#b8e8d5;
+  --yellow:#ffe39a;
+  --cream:#fffaf2;
+  --ink:#39354c;
 }
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Be Vietnam Pro',sans-serif;
+  background:var(--cream);
+  color:var(--ink);
+  overflow-x:hidden;
 }
+a{text-decoration:none;color:inherit}
+button,input{font:inherit}
+.container{width:min(1100px,90%);margin:auto}
 
-body {
-  font-family: 'Be Vietnam Pro', sans-serif;
-  background: var(--light);
-  color: #20223d;
+/* HEADER */
+header{
+  position:sticky;top:12px;z-index:10;
+  width:min(1100px,92%);margin:15px auto;
+  padding:14px 22px;
+  display:flex;align-items:center;justify-content:space-between;
+  background:#ffffffdf;backdrop-filter:blur(15px);
+  border:1px solid white;border-radius:22px;
+  box-shadow:0 8px 25px #54436b12;
 }
+.logo{font:700 23px Fredoka;color:#ed7898}
+.logo span{color:#a38be0}
+nav{display:flex;gap:25px}
+nav a{font-size:13px;font-weight:700;color:#706b7e}
+nav a:hover{color:#ed7898}
+.menu-btn{display:none;border:0;background:none;font-size:24px}
 
-header {
-  background: var(--dark);
-  color: white;
-  padding: 20px 7%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+/* HERO */
+.hero{
+  display:grid;grid-template-columns:1.1fr .9fr;
+  gap:35px;align-items:center;padding:65px 0 75px;
 }
-
-.logo {
-  font-size: 20px;
-  font-weight: 800;
+.tag{
+  display:inline-block;background:#ffe3eb;color:#df7594;
+  padding:9px 16px;border-radius:30px;font-size:12px;font-weight:800;
 }
-
-.logo span {
-  color: var(--blue);
+.hero h1{
+  font:700 clamp(38px,6vw,65px) Fredoka;
+  line-height:1.12;margin:22px 0 15px;
 }
-
-nav {
-  display: flex;
-  gap: 22px;
-  flex-wrap: wrap;
+.hero h1 span{color:#e987a4}
+.hero p{color:#898398;line-height:1.9;font-size:14px;max-width:470px}
+.main-btn{
+  display:inline-block;margin-top:25px;padding:14px 23px;
+  background:#ed91ac;color:white;border-radius:15px;
+  font-size:13px;font-weight:800;
+  box-shadow:0 7px 0 #d97796;
+  transition:.2s;
 }
-
-nav a {
-  text-decoration: none;
-  color: #d5d7e8;
-  font-size: 12px;
-  transition: .3s;
+.main-btn:hover{transform:translateY(-3px)}
+.art{
+  min-height:340px;background:#e8e1ff;border-radius:45% 45% 35% 35%;
+  display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;
 }
-
-nav a:hover {
-  color: var(--blue);
+.art .book{font-size:125px;filter:drop-shadow(0 15px 10px #8776a533)}
+.sticker{
+  position:absolute;padding:12px 16px;border-radius:18px;
+  background:white;font-size:13px;font-weight:800;
+  box-shadow:0 8px 20px #54436b12;
 }
+.s1{top:35px;left:20px;transform:rotate(-8deg)}
+.s2{right:15px;bottom:50px;transform:rotate(7deg)}
+.spark{position:absolute;font-size:30px}
+.sp1{top:75px;right:55px}.sp2{bottom:35px;left:45px}
 
-/* BANNER */
+/* SECTION */
+section{padding:45px 0}
+.section-head{text-align:center;margin-bottom:28px}
+.section-head small{color:#e987a4;font-weight:800;letter-spacing:2px}
+.section-head h2{font:700 34px Fredoka;margin-top:8px}
+.section-head p{font-size:13px;color:#9991a5;margin-top:8px}
 
-.hero {
-  background:
-    radial-gradient(circle at 85% 20%, #5145b8, transparent 35%),
-    linear-gradient(120deg,#111329,#20204b);
-  color: white;
-  padding: 90px 8%;
-  min-height: 470px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-  overflow: hidden;
+/* SEARCH */
+.search{
+  max-width:500px;margin:0 auto 35px;
+  display:flex;gap:10px;background:white;
+  border:2px solid #f3e9ef;padding:8px 12px;
+  border-radius:17px;
 }
+.search input{border:0;outline:0;flex:1;min-width:0;font-size:13px}
+.search span{font-size:20px}
 
-.hero-content {
-  max-width: 650px;
+/* CARDS */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{
+  background:white;padding:25px;border-radius:25px;
+  border:1px solid #f5edf0;
+  box-shadow:0 10px 25px #54436b08;
+  transition:.25s;
 }
-
-.tag {
-  color: var(--blue);
-  font-size: 12px;
-  font-weight: bold;
-  letter-spacing: 3px;
+.card:hover{transform:translateY(-7px);box-shadow:0 15px 30px #54436b15}
+.card-icon{
+  width:65px;height:65px;border-radius:20px;
+  display:grid;place-items:center;font-size:31px;margin-bottom:20px;
 }
+.pink{background:#ffe5ed}
+.purple{background:#eee8ff}
+.mint{background:#e0f5eb}
+.yellow{background:#fff1c9}
+.card h3{font:600 21px Fredoka;margin-bottom:10px}
+.card p{font-size:12px;line-height:1.8;color:#9690a1}
+.card a{display:inline-block;margin-top:18px;color:#e987a4;font-size:12px;font-weight:800}
 
-.hero h1 {
-  font-size: clamp(38px,5vw,64px);
-  line-height: 1.2;
-  margin: 22px 0;
+/* ABOUT */
+.about{
+  background:#f0eaff;border-radius:35px;padding:40px;
+  display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:center;
 }
+.about h2{font:700 34px Fredoka;margin:12px 0}
+.about p{font-size:13px;color:#777087;line-height:1.9}
+.about-art{text-align:center;font-size:110px}
 
-.hero h1 span {
-  color: var(--blue);
+/* QUIZ */
+.quiz{
+  background:white;border-radius:28px;padding:30px;
+  max-width:650px;margin:auto;text-align:center;
+  box-shadow:0 10px 30px #54436b0c;
 }
-
-.hero p {
-  color: #b5b8d0;
-  line-height: 1.9;
-  font-size: 14px;
+.quiz h3{font:600 23px Fredoka;margin:10px 0 20px}
+.answers{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.answers button{
+  border:2px solid #f0e9f1;background:#fffafc;
+  border-radius:14px;padding:14px;cursor:pointer;
+  font-weight:700;color:#686176;
 }
-
-.hero-btn {
-  display: inline-block;
-  background: var(--purple);
-  color: white;
-  padding: 14px 25px;
-  border-radius: 8px;
-  margin-top: 25px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 13px;
-  transition: .3s;
-}
-
-.hero-btn:hover {
-  background: #5544e8;
-  transform: translateY(-3px);
-}
-
-.hero-art {
-  font-size: 130px;
-  filter: drop-shadow(0 0 30px #43c6f555);
-  animation: floating 3s infinite ease-in-out;
-}
-
-@keyframes floating {
-  50% { transform: translateY(-15px); }
-}
-
-/* SECTIONS */
-
-section {
-  padding: 75px 8%;
-}
-
-.section-label {
-  color: var(--purple);
-  font-size: 11px;
-  font-weight: bold;
-  letter-spacing: 3px;
-}
-
-.section-title {
-  font-size: 31px;
-  margin: 12px 0;
-}
-
-.section-desc {
-  color: #777b93;
-  font-size: 14px;
-  line-height: 1.8;
-  margin-bottom: 30px;
-}
-
-/* KIẾN THỨC */
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 20px;
-}
-
-.card {
-  background: white;
-  padding: 27px;
-  border-radius: 14px;
-  border: 1px solid #ececf5;
-  transition: .3s;
-}
-
-.card:hover {
-  transform: translateY(-7px);
-  box-shadow: 0 15px 35px #34346b16;
-}
-
-.card-icon {
-  width: 55px;
-  height: 55px;
-  background: #eeedff;
-  border-radius: 13px;
-  display: grid;
-  place-items: center;
-  font-size: 27px;
-  margin-bottom: 20px;
-}
-
-.card h3 {
-  font-size: 16px;
-  margin-bottom: 12px;
-}
-
-.card p {
-  font-size: 13px;
-  color: #85889d;
-  line-height: 1.8;
-}
-
-.card a {
-  display: inline-block;
-  margin-top: 17px;
-  color: var(--purple);
-  font-size: 12px;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-/* TÌM KIẾM */
-
-.search-area {
-  background: #eae9ff;
-  padding: 35px;
-  border-radius: 16px;
-  margin-bottom: 35px;
-}
-
-.search-area h3 {
-  margin-bottom: 15px;
-}
-
-.search-area input {
-  width: 100%;
-  padding: 14px;
-  border: 1px solid #d8d6f7;
-  border-radius: 8px;
-  outline: none;
-  font-family: inherit;
-}
-
-#search-result {
-  margin-top: 12px;
-  font-size: 13px;
-  color: #5145b8;
-}
-
-/* TÀI LIỆU */
-
-.library {
-  background: white;
-}
-
-.resource-list {
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 15px;
-}
-
-.resource {
-  background: #f7f7fc;
-  border: 1px solid #ededf5;
-  padding: 20px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.resource-icon {
-  font-size: 28px;
-}
-
-.resource strong {
-  font-size: 13px;
-}
-
-.resource p {
-  font-size: 11px;
-  color: #898ba0;
-  margin-top: 5px;
-}
-
-/* BÀI TẬP */
-
-.practice {
-  background: var(--dark);
-  color: white;
-}
-
-.practice .section-title {
-  color: white;
-}
-
-.question-box {
-  background: #222442;
-  border: 1px solid #393b62;
-  padding: 30px;
-  border-radius: 15px;
-  max-width: 700px;
-}
-
-.question-box h3 {
-  margin-bottom: 20px;
-}
-
-.answer {
-  display: block;
-  width: 100%;
-  text-align: left;
-  padding: 14px;
-  margin: 10px 0;
-  background: #303251;
-  border: 1px solid #44466d;
-  color: white;
-  border-radius: 8px;
-  cursor: pointer;
-  font-family: inherit;
-  transition: .2s;
-}
-
-.answer:hover {
-  background: var(--purple);
-}
-
-#result {
-  margin-top: 20px;
-  color: var(--blue);
-  font-size: 14px;
-}
-
-/* GIỚI THIỆU */
-
-.about {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 40px;
-  align-items: center;
-}
-
-.about-art {
-  background: linear-gradient(135deg,#dedbff,#d7f4ff);
-  min-height: 250px;
-  display: grid;
-  place-items: center;
-  border-radius: 18px;
-  font-size: 85px;
-}
-
-.about p {
-  color: #777b93;
-  line-height: 1.9;
-  font-size: 14px;
-}
+.answers button:hover{background:#ffe8ef;border-color:#ffadc2}
+#result{margin-top:18px;font-size:14px;font-weight:700}
 
 /* FOOTER */
-
-footer {
-  background: #111329;
-  color: white;
-  text-align: center;
-  padding: 35px 20px;
+footer{
+  margin-top:55px;background:#39354c;color:white;
+  text-align:center;padding:35px 15px;
 }
+footer h2{font:600 25px Fredoka;color:#ffb3c8}
+footer p{font-size:12px;color:#d1ccdc;margin-top:10px}
 
-footer p {
-  color: #a5a9c1;
-  font-size: 12px;
-  margin-top: 10px;
+@media(max-width:750px){
+  nav{display:none;position:absolute;top:65px;left:0;width:100%;
+    background:white;padding:20px;border-radius:18px;flex-direction:column;gap:18px}
+  nav.show{display:flex}
+  .menu-btn{display:block}
+  .hero{grid-template-columns:1fr;text-align:center;padding-top:40px}
+  .hero p{margin:auto}
+  .art{min-height:270px}
+  .cards{grid-template-columns:1fr 1fr}
+  .about{grid-template-columns:1fr;text-align:center}
 }
-
-@media(max-width:760px) {
-  header {
-    flex-direction: column;
-    gap: 18px;
-  }
-
-  nav {
-    justify-content: center;
-    gap: 14px;
-  }
-
-  .hero {
-    flex-direction: column;
-    text-align: center;
-    padding: 65px 7%;
-  }
-
-  .hero-art {
-    font-size: 90px;
-  }
-
-  .cards {
-    grid-template-columns: 1fr;
-  }
-
-  .resource-list {
-    grid-template-columns: 1fr;
-  }
-
-  .about {
-    grid-template-columns: 1fr;
-  }
+@media(max-width:480px){
+  .cards{grid-template-columns:1fr}
+  .section-head h2{font-size:29px}
+  .answers{grid-template-columns:1fr}
+  .about{padding:28px}
 }
 </style>
 </head>
 
 <body>
-
 <header>
   <div class="logo">QUỲNH NHƯ <span>A2.</span></div>
-
-  <nav>
+  <nav id="nav">
     <a href="#home">Trang chủ</a>
-    <a href="#knowledge">Kiến thức</a>
-    <a href="#documents">Tài liệu</a>
-    <a href="#practice">Bài tập</a>
+    <a href="#lessons">Bài học</a>
     <a href="#about">Giới thiệu</a>
+    <a href="#quiz">Trắc nghiệm</a>
   </nav>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
 </header>
 
-<main>
-
-<!-- TRANG CHỦ -->
-
-<div class="hero" id="home">
-  <div class="hero-content">
-    <div class="tag">WELCOME TO MY WEBSITE</div>
-
-    <h1>WELCOME TO<br>
-      <span>DIGITAL WORLD</span>
-    </h1>
-
-    <p>
-      Chào mừng bạn đến với không gian học tập
-      Tin học của Quỳnh Như A2.
-      Cùng khám phá kiến thức, công nghệ
-      và những điều thú vị trong thế giới số!
-    </p>
-
-    <a href="#knowledge" class="hero-btn">
-      KHÁM PHÁ NGAY →
-    </a>
-  </div>
-
-  <div class="hero-art">💻</div>
-</div>
-
-<!-- KIẾN THỨC -->
-
-<section id="knowledge">
-
-  <div class="section-label">01 / KNOWLEDGE</div>
-  <h2 class="section-title">Khám phá kiến thức</h2>
-
-  <p class="section-desc">
-    Học tập và tìm hiểu những kiến thức thú vị
-    về công nghệ thông tin.
-  </p>
-
-  <div class="cards">
-
-    <div class="card">
-      <div class="card-icon">🖥️</div>
-      <h3>Máy tính và công nghệ</h3>
-      <p>
-        Tìm hiểu cấu tạo máy tính,
-        phần cứng và phần mềm.
-      </p>
-      <a href="#documents">Khám phá thêm →</a>
-    </div>
-
-    <div class="card">
-      <div class="card-icon">🌐</div>
-      <h3>Mạng Internet</h3>
-      <p>
-        Khám phá mạng máy tính,
-        Internet và thế giới trực tuyến.
-      </p>
-      <a href="#documents">Khám phá thêm →</a>
-    </div>
-
-    <div class="card">
-      <div class="card-icon">🤖</div>
-      <h3>Trí tuệ nhân tạo</h3>
-      <p>
-        Tìm hiểu AI và những ứng dụng
-        của công nghệ trong cuộc sống.
-      </p>
-      <a href="#documents">Khám phá thêm →</a>
-    </div>
-
-  </div>
-</section>
-
-<!-- TÀI LIỆU -->
-
-<section class="library" id="documents">
-
-  <div class="section-label">02 / LIBRARY</div>
-  <h2 class="section-title">Thư viện học tập</h2>
-
-  <p class="section-desc">
-    Tìm kiếm và khám phá tài liệu học tập.
-  </p>
-
-  <div class="search-area">
-    <h3>🔎 Bạn đang tìm kiếm gì?</h3>
-    <input
-      type="text"
-      id="search"
-      placeholder="Nhập tên tài liệu..."
-      oninput="searchDocuments()"
-    >
-    <div id="search-result"></div>
-  </div>
-
-  <div class="resource-list" id="resource-list">
-
-    <div class="resource">
-      <div class="resource-icon">📘</div>
-      <div>
-        <strong>Bài học Tin học</strong>
-        <p>Kiến thức theo từng chủ đề</p>
-      </div>
-    </div>
-
-    <div class="resource">
-      <div class="resource-icon">📝</div>
-      <div>
-        <strong>Tóm tắt lý thuyết</strong>
-        <p>Nội dung ngắn gọn, dễ ghi nhớ</p>
-      </div>
-    </div>
-
-    <div class="resource">
-      <div class="resource-icon">📂</div>
-      <div>
-        <strong>Tài liệu tham khảo</strong>
-        <p>Nguồn học tập bổ sung</p>
-      </div>
-    </div>
-
-    <div class="resource">
-      <div class="resource-icon">💡</div>
-      <div>
-        <strong>Mẹo học tập</strong>
-        <p>Gợi ý học tập hiệu quả</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- BÀI TẬP -->
-
-<section class="practice" id="practice">
-
-  <div class="section-label">03 / PRACTICE</div>
-  <h2 class="section-title">Thử thách Tin học</h2>
-
-  <p class="section-desc" style="color:#a5a9c1">
-    Cùng kiểm tra kiến thức của bạn nhé!
-  </p>
-
-  <div class="question-box">
-
-    <h3>
-      Câu 1: Bộ phận nào được xem là bộ não
-      của máy tính?
-    </h3>
-
-    <button class="answer" onclick="checkAnswer('A')">
-      A. Màn hình
-    </button>
-
-    <button class="answer" onclick="checkAnswer('B')">
-      B. CPU
-    </button>
-
-    <button class="answer" onclick="checkAnswer('C')">
-      C. Bàn phím
-    </button>
-
-    <div id="result"></div>
-
-  </div>
-</section>
-
-<!-- GIỚI THIỆU -->
-
-<section id="about">
-
-  <div class="about">
-
-    <div class="about-art">💻✨</div>
-
+<main class="container">
+  <div class="hero" id="home">
     <div>
-      <div class="section-label">04 / ABOUT ME</div>
+      <span class="tag">🌷 WELCOME TO MY WEBSITE</span>
+      <h1>Học tập thật vui cùng <span>Quỳnh Như!</span></h1>
+      <p>Chào mừng bạn đến với góc học tập nhỏ xinh của mình. Cùng khám phá kiến thức, lưu giữ những điều thú vị và học tập mỗi ngày nhé!</p>
+      <a href="#lessons" class="main-btn">Khám phá ngay ✨</a>
+    </div>
+    <div class="art">
+      <span class="spark sp1">✦</span>
+      <span class="spark sp2">♡</span>
+      <div class="book">📚</div>
+      <div class="sticker s1">Study time! ☁️</div>
+      <div class="sticker s2">Dream big 🌈</div>
+    </div>
+  </div>
 
-      <h2 class="section-title">
-        Về website của mình
-      </h2>
-
-      <p>
-        Xin chào! Chào mừng bạn đến với website
-        QUỲNH NHƯ A2.
-        Đây là không gian chia sẻ kiến thức,
-        tài liệu và những nội dung thú vị
-        về môn Tin học.
-        Website được tạo ra với mong muốn
-        mang đến một môi trường học tập
-        sáng tạo, thân thiện và bổ ích.
-      </p>
+  <section id="lessons">
+    <div class="section-head">
+      <small>MY LEARNING SPACE</small>
+      <h2>Góc học tập của mình 💗</h2>
+      <p>Chọn một chủ đề để bắt đầu khám phá nha!</p>
     </div>
 
-  </div>
-</section>
+    <div class="search">
+      <span>🔎</span>
+      <input id="searchInput" placeholder="Tìm kiếm nội dung..." oninput="searchCards()">
+    </div>
 
+    <div class="cards" id="cardList">
+      <div class="card">
+        <div class="card-icon pink">📖</div>
+        <h3>Ngữ văn</h3>
+        <p>Khám phá thế giới văn học và những bài học ý nghĩa.</p>
+        <a href="#">Khám phá →</a>
+      </div>
+      <div class="card">
+        <div class="card-icon purple">💻</div>
+        <h3>Tin học</h3>
+        <p>Tìm hiểu công nghệ, lập trình và sáng tạo website.</p>
+        <a href="#">Khám phá →</a>
+      </div>
+      <div class="card">
+        <div class="card-icon mint">🌍</div>
+        <h3>Tiếng Anh</h3>
+        <p>Cùng học từ vựng và khám phá ngôn ngữ mới.</p>
+        <a href="#">Khám phá →</a>
+      </div>
+      <div class="card">
+        <div class="card-icon yellow">🧮</div>
+        <h3>Toán học</h3>
+        <p>Chinh phục những con số và thử thách thú vị.</p>
+        <a href="#">Khám phá →</a>
+      </div>
+      <div class="card">
+        <div class="card-icon mint">🎨</div>
+        <h3>Sáng tạo</h3>
+        <p>Nơi lưu giữ những ý tưởng và sản phẩm của mình.</p>
+        <a href="#">Khám phá →</a>
+      </div>
+      <div class="card">
+        <div class="card-icon pink">📝</div>
+        <h3>Tài liệu</h3>
+        <p>Tổng hợp tài liệu và ghi chú học tập hữu ích.</p>
+        <a href="#">Khám phá →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="about">
+      <div>
+        <span class="tag">A LITTLE ABOUT ME</span>
+        <h2>Xin chào! 🌸</h2>
+        <p>Mình là Quỳnh Như. Đây là không gian nhỏ được tạo ra để chia sẻ những điều mình yêu thích, các kiến thức đã học và những sản phẩm sáng tạo của bản thân.</p>
+        <p style="margin-top:12px">Hy vọng bạn sẽ tìm thấy nhiều điều thú vị ở đây!</p>
+      </div>
+      <div class="about-art">🌷🧸☁️</div>
+    </div>
+  </section>
+
+  <section id="quiz">
+    <div class="section-head">
+      <small>LET'S PLAY</small>
+      <h2>Một chút thử thách 🎀</h2>
+      <p>Thử sức với câu hỏi nhỏ nhé!</p>
+    </div>
+    <div class="quiz">
+      <span style="font-size:35px">💡</span>
+      <h3>HTML được sử dụng chủ yếu để làm gì?</h3>
+      <div class="answers">
+        <button onclick="checkAnswer(false)">Chỉnh sửa hình ảnh</button>
+        <button onclick="checkAnswer(true)">Tạo cấu trúc trang web</button>
+        <button onclick="checkAnswer(false)">Chơi trò chơi</button>
+        <button onclick="checkAnswer(false)">Soạn văn bản</button>
+      </div>
+      <div id="result"></div>
+    </div>
+  </section>
 </main>
 
 <footer>
-  <h3>QUỲNH NHƯ A2</h3>
-  <p>LEARN MORE • CREATE MORE • EXPLORE MORE</p>
-  <p>© 2026 Digital World. All rights reserved.</p>
+  <h2>QUỲNH NHƯ A2 ♡</h2>
+  <p>Made with love and creativity ✨</p>
+  <p>© 2026 - My little learning corner</p>
 </footer>
 
 <script>
-
-// TÌM KIẾM TÀI LIỆU
-
-function searchDocuments() {
-  const input = document
-    .getElementById("search")
-    .value.toLowerCase();
-
-  const items = document.querySelectorAll(".resource");
-  let count = 0;
-
-  items.forEach(item => {
-    const text = item.innerText.toLowerCase();
-
-    if (text.includes(input)) {
-      item.style.display = "flex";
-      count++;
-    } else {
-      item.style.display = "none";
-    }
-  });
-
-  document.getElementById("search-result").innerText =
-    input === "" ? "" :
-    count > 0 ? "Tìm thấy " + count + " kết quả." :
-    "Không tìm thấy tài liệu phù hợp.";
+function toggleMenu(){
+  document.getElementById('nav').classList.toggle('show');
 }
 
-// TRẮC NGHIỆM
+function searchCards(){
+  const value=document.getElementById('searchInput').value.toLowerCase();
+  document.querySelectorAll('#cardList .card').forEach(card=>{
+    card.style.display=card.innerText.toLowerCase().includes(value)?'block':'none';
+  });
+}
 
-function checkAnswer(answer) {
-  const result = document.getElementById("result");
-
-  if (answer === "B") {
-    result.innerHTML =
-      "🎉 Chính xác! CPU là bộ xử lý trung tâm của máy tính.";
-  } else {
-    result.innerHTML =
-      "Chưa chính xác! Đáp án đúng là B. CPU nhé!";
+function checkAnswer(correct){
+  const result=document.getElementById('result');
+  if(correct){
+    result.textContent='🎉 Chính xác! Bạn giỏi quá!';
+    result.style.color='#45a982';
+  }else{
+    result.textContent='🌷 Chưa đúng rồi, thử lại nhé!';
+    result.style.color='#e987a4';
   }
 }
-
 </script>
-
 </body>
 </html>
